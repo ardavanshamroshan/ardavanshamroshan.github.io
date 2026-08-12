@@ -65,6 +65,11 @@
     localStorage.setItem("theme", nextDark ? "dark" : "light");
   });
 
+  // Migrate first visit / old system preference into dark default
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "dark");
+  }
+
   menuToggle?.addEventListener("click", () => {
     if (!mobileNav) return;
     const open = mobileNav.hasAttribute("hidden");
