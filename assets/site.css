@@ -543,11 +543,11 @@ html.dark .btn-primary {
 }
 
 .contact-icon.gmail {
-  background: #151716;
+  background: #fff;
 }
 
-html:not(.dark) .contact-icon.gmail {
-  background: #fff;
+html.dark .contact-icon.gmail {
+  background: #ffffff;
 }
 
 .contact-text {
