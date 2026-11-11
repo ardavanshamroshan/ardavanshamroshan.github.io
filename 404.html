@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        var path = location.pathname || '/'
+        var prefixes = [
+          '/skills',
+          '/rules',
+          '/workflows',
+          '/plugins',
+          '/catalog',
+          '/getting-started',
+          '/fa',
+        ]
+        var shouldRedirect = prefixes.some(function (prefix) {
+          return path === prefix || path.indexOf(prefix + '/') === 0
+        })
+        if (shouldRedirect) {
+          location.replace('/ai-skills' + path + location.search + location.hash)
+          return
+        }
+        location.replace('/')
+      })()
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/" />
+    </noscript>
+  </head>
+  <body>
+    <p>Page not found. <a href="/">Go home</a> or open <a href="/ai-skills/">AI Skills docs</a>.</p>
+  </body>
+</html>
