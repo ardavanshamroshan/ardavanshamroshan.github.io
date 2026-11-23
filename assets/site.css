@@ -413,6 +413,10 @@ html.dark .btn-primary {
   border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
 }
 
+.package-text {
+  grid-template-rows: 1fr;
+}
+
 .package-cover {
   margin: 0;
   aspect-ratio: 16 / 10;
